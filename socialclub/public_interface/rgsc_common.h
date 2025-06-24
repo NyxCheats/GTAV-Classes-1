@@ -397,7 +397,7 @@ RgscStringDuplicate(const T* str)
 	if(!str)
 		return 0;
 	int siz = (int)RgscStringLength(str) + 1;
-	return (T*)memcpy(rage_new T[siz], str, sizeof(T) * siz);
+	return (T*)memcpy(new T[siz], str, sizeof(T) * siz);
 }
 
 template< typename T >
