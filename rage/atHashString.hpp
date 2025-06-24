@@ -1,5 +1,6 @@
 #pragma once
 #include "datGrowBuffer.hpp"
+#include "atStringHash.hpp"
 
 namespace rage {
 	class atHashString {
