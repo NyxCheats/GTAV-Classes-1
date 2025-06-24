@@ -1,0 +1,11 @@
+#pragma once
+
+namespace rage {
+	enum netTcpResult {
+		NETTCP_RESULT_DISCONNECTED = -4,
+		NETTCP_RESULT_TIMED_OUT,
+		NETTCP_RESULT_ERROR,
+		NETTCP_RESULT_CANCELED,
+		NETTCP_RESULT_OK
+	};
+}

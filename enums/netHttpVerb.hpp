@@ -1,0 +1,13 @@
+#pragma once
+
+namespace rage {
+	enum netHttpVerb {
+		NET_HTTP_VERB_INVALID,
+		NET_HTTP_VERB_GET,
+		NET_HTTP_VERB_POST,
+		NET_HTTP_VERB_PUT,
+		NET_HTTP_VERB_DELETE,
+		NET_HTTP_VERB_HEAD,
+		NET_HTTP_VERBS_COUNT
+	};
+}
