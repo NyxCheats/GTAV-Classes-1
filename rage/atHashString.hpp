@@ -14,4 +14,5 @@ namespace rage {
 	};
 	typedef atHashString atHashWithStringBank;
 	typedef atHashString atFinalHashString;
+	typedef atHashString strStreamingObjectName;
 }

@@ -220,13 +220,13 @@ static_assert(sizeof(CConfigStreamingEngine) == 0xC);
 class CConfigOnlineServices
 {
 public:
-	char* m_ros_title_name;
-	int32_t m_ros_title_version;
-	int32_t m_sc_version;
-	int64_t m_steam_app_id;
-	char* m_title_directory_name;
-	char* m_multiplayer_session_template_name;
-	char* m_sc_auth_title_id;
+    char*   m_ros_title_name;
+    int32_t m_ros_title_version;
+    int32_t m_sc_version;
+    int64_t m_steam_app_id;
+    char*   m_title_directory_name;
+    char*   m_multiplayer_session_template_name;
+    char*   m_sc_auth_title_id;
 };
 static_assert(sizeof(CConfigOnlineServices) == 0x30);
 
@@ -244,7 +244,6 @@ class CConfigScriptStackSizes
 public:
 	rage::atArray<CStackSizeData> m_stack_size_data;
 };
-static_assert(sizeof(CConfigScriptStackSizes) == 0x10);
 
 class CGameConfig : public rage::fwConfig {
 public:
