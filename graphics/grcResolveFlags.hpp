@@ -1,5 +1,7 @@
 #pragma once
 #include "Color32.hpp"
+#include "enums/grcMrt.hpp"
+
 #include <cstdint>
 
 namespace rage {

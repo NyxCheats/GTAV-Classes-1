@@ -1,4 +1,5 @@
 #pragma once
+#include "grcInstanceData.hpp"
 #include "grcTexture.hpp"
 
 #include <cstdint>
@@ -8,6 +9,7 @@ namespace rage {
 		TEXTURE_REGISTER_BITS = 6,
 		TEXTURE_USAGE_BITS    = 7
 	};
+
 	class grcParameter {
 		friend class grcEffect;
 		friend class grcInstanceData;
@@ -30,8 +32,8 @@ namespace rage {
 		uint8_t Count;
 		uint8_t DataSize;
 		uint8_t AnnotationCount;
-		grcString Name;
-		grcString Semantic;
+		const char* Name;
+		const char* Semantic;
 		uint32_t NameHash;
 		uint32_t SemanticHash;
 		Annotation* Annotations;

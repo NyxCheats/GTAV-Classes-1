@@ -18,7 +18,6 @@ namespace rage {
 		int x1, y1;
 		int x2, y2;
 	} GRCRECT;
-	using grcString = const char*;
 	class grcTexture : public pgBase {
 	public:
 		const char* GetName() const {

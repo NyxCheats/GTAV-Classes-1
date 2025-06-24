@@ -9,7 +9,7 @@ namespace rage {
 		uint32_t Size;
 		uint16_t Registers [ 6 ];
 		uint32_t NameHash;
-		grcString Name;
+		const char* Name;
 		grcBuffer* m_pBuffer;
 		char* m_pAlignedBackingStore;
 		char* m_pAllocatedBackingStore;

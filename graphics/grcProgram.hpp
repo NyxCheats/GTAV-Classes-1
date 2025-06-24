@@ -20,7 +20,7 @@ namespace rage {
 		virtual ~grcProgram()                   = default;
 		virtual uint32_t GetProgramSize() const = 0;
 
-		grcString m_EntryName;
+		const char* m_EntryName;
 		atArray<uint32_t> m_Constants;
 		void** m_ppDeviceCBuffers;
 		uint32_t m_CBufferFingerprint;

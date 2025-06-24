@@ -71,7 +71,7 @@ namespace rage {
 		struct Technique {
 			typedef grcEffect_Technique_Pass Pass;
 			uint32_t NameHash;
-			grcString Name;
+			const char* Name;
 			atArray<Pass> Passes;
 		};
 		static uint8_t GetStencilRefMask() {
@@ -90,7 +90,7 @@ namespace rage {
 		char m_EffectName [ 40 ];
 		grcInstanceData m_InstanceData;
 		uint64_t m_EffectTimeStamp;
-		grcString m_EffectPath;
+		const char* m_EffectPath;
 		uint32_t m_NameHash;
 		atArray<grcParameterAnnotation> m_Properties;
 		uint32_t m_Dcl;

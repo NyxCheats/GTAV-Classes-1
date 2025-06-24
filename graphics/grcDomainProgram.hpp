@@ -1,5 +1,7 @@
 #pragma once
+#include "enums/ShaderType.hpp"
 #include "grcProgram.hpp"
+
 #include <cstdint>
 
 namespace rage {
