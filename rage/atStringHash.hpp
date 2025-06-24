@@ -1,5 +1,6 @@
 #pragma once
 #include "datGrowBuffer.hpp"
+#include "atHashString.hpp"
 
 namespace rage {
 	inline constexpr char jTolower(char const c) {
