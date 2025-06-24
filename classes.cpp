@@ -237,6 +237,7 @@
 #include "socialclub/FriendInfo.hpp"
 #include "socialclub/FriendRegistry.hpp"
 #include "socialclub/ScInfo.hpp"
+#include "socialclub/rlPc.hpp"
 #include "stats/CPlayerCardStats.hpp"
 #include "stats/CStatsSerializationContext.hpp"
 #include "ui/CBlipList.hpp"
