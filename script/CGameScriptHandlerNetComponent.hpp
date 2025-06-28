@@ -1,26 +1,25 @@
-#include <cstdint>
 #include "scriptHandlerNetComponent.hpp"
 
+#include <cstdint>
+
 #pragma pack(push, 8)
-struct CScriptParticipant
-{
+struct CScriptParticipant {
 	CScriptParticipant* m_next;
 	CScriptParticipant* m_prev;
 	CNetGamePlayer* m_net_game_player;
 	std::uint16_t m_participant_id;
 	std::uint16_t m_participant_index; // or "slot number"
 	int m_join_time;
-	char gap20[8];
+	char gap20 [ 8 ];
 };
 
-class CGameScriptHandlerNetComponent : public rage::scriptHandlerNetComponent
-{
+class CGameScriptHandlerNetComponent : public rage::scriptHandlerNetComponent {
 public:
 	virtual ~CGameScriptHandlerNetComponent() override = default;
 
 	virtual bool _0x08(void*) = 0;
 
-	virtual void _0x10(CNetGamePlayer*) = 0;// creates a scriptId?
+	virtual void _0x10(CNetGamePlayer*) = 0; // creates a scriptId?
 
 	virtual void* player_left(CNetGamePlayer* player) = 0;
 
@@ -86,27 +85,27 @@ public:
 
 	virtual void* _0x110() = 0;
 
-	virtual bool _0x118() = 0;// related to above function
+	virtual bool _0x118() = 0; // related to above function
 
 	int m_state;
 	int m_join_msg_ack_pending_players;
 	CScriptParticipant* m_first_participant;
-	char gap20[16];
+	char gap20 [ 16 ];
 	CScriptParticipant* m_host;
 	std::int16_t m_local_participant_index;
-	char pad_003A[6];
+	char pad_003A [ 6 ];
 	unsigned int m_participant_bitset;
 	uint16_t m_host_token;
 	CNetGamePlayer* m_last_host;
 	CNetGamePlayer* m_host_migration_target;
 	CNetGamePlayer* m_apparent_host_player;
-	char gap60[8];
-	char new_68[8]; // added b3407
-	CScriptParticipant* m_participants[32];
-	char pad_0168[8];
+	char gap60 [ 8 ];
+	char new_68 [ 8 ]; // added b3407
+	CScriptParticipant* m_participants [ 32 ];
+	char pad_0168 [ 8 ];
 	int m_next_host_verify_time;
 	char m_max_participants;
-	char pad_0175[23];
+	char pad_0175 [ 23 ];
 	uint8_t m_num_participants;
 	uint8_t m_num_candidates;
 	uint8_t m_host_ack_error;
@@ -114,24 +113,20 @@ public:
 	uint8_t m_player_array_count;
 	uint8_t m_host_migration_state;
 	std::uint8_t m_flags;
-	char pad_0193[13];
+	char pad_0193 [ 13 ];
 	char m_script_status_queried;
 
-#ifdef YimMenu
 	int get_participant_index(CNetGamePlayer* player);
 	bool is_player_a_participant(CNetGamePlayer* player);
-#endif
 
-	inline bool is_local_player_host()
-	{
+	inline bool is_local_player_host() {
 		if (!m_host)
-			return true;// or return false?
+			return true; // or return false?
 
 		return m_host->m_participant_index == m_local_participant_index;
 	}
 
-	inline CNetGamePlayer* get_host()
-	{
+	inline CNetGamePlayer* get_host() {
 		if (!m_host)
 			return nullptr;
 

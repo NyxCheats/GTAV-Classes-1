@@ -2,9 +2,8 @@
 
 #include "CBlip.hpp"
 
-class CBlipEntry
-{
+class CBlipEntry {
 public:
-	rage::CBlip* m_pBlip; //0x0000 
+	rage::CBlip* m_pBlip; //0x0000
 
-};//Size=0x0008
+}; //Size=0x0008

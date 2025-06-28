@@ -1,8 +1,7 @@
 #pragma once
 #include "types.hpp"
 
-enum class HudColor : std::uint32_t
-{
+enum class HudColor : std::uint32_t {
 	HUD_COLOUR_PURE_WHITE,
 	HUD_COLOUR_WHITE,
 	HUD_COLOUR_BLACK,

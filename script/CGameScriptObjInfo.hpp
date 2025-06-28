@@ -3,8 +3,7 @@
 #include "types.hpp"
 
 #pragma pack(push, 4)
-class CGameScriptObjInfo
-{
+class CGameScriptObjInfo {
 public:
 	virtual ~CGameScriptObjInfo() = default;
 
