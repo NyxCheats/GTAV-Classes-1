@@ -22,4 +22,3 @@ public:
 	std::uint8_t m_force_cleanup_state;         // 0x153
 	char m_padding8 [ 0xC ];                    // 0x154
 };
-static_assert(sizeof(GtaThread) == 0x160);

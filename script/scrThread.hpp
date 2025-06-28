@@ -4,6 +4,7 @@
 #include "enums/scrThreadId.hpp"
 #include "rage/atRangeArray.hpp"
 #include "scrThreadContext.hpp"
+#include "scrVector.hpp"
 #include "scriptHandler.hpp"
 #include "scriptHandlerNetComponent.hpp"
 
@@ -45,13 +46,13 @@ namespace rage {
 			int m_StackSize;
 			int m_CatchPC, m_CatchFP, m_CatchSP;
 			Priority m_Priority; // 0=highest (runs first), 2=lowest (runs last)
-			s8 m_CallDepth;
+			int8_t m_CallDepth;
 			atRangeArray<int, MAX_CALLSTACK> m_CallStack;
 		};
 		struct Global {
 			int BasicType; // enumerant in scrValue
 			int Offset;    // Base address of this variable
-			u32 Hash; // Hashed name of this variable (as per scrComputeHash)
+			uint32_t Hash; // Hashed name of this variable (as per scrComputeHash)
 		};
 		struct Info {
 			Info(scrValue* resultPtr, int parameterCount, const scrValue* params) :
@@ -106,7 +107,7 @@ namespace rage {
 		int m_argStructSize;
 		int m_argStructOffset;
 		const char* m_AbortReason;
-		u32 m_ScriptNameHash;
+		uint32_t m_ScriptNameHash;
 		char m_ScriptName [ 64 ];
 	};
 	typedef void (*scrCmd)(scrThread::Info*);
