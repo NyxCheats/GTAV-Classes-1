@@ -252,6 +252,8 @@
 #include "socialclub/FriendRegistry.hpp"
 #include "socialclub/ScInfo.hpp"
 #include "socialclub/rlPc.hpp"
+#include "socialclub/rlRosTitleId.hpp"
+#include "socialclub/rlRosTitleSecrets.hpp"
 #include "stats/CPlayerCardStats.hpp"
 #include "stats/CStatsSerializationContext.hpp"
 #include "ui/CBlipList.hpp"
@@ -274,5 +276,3 @@
 #include "weapon/CItemInfo.hpp"
 #include "weapon/CWeaponBoneId.hpp"
 #include "weapon/CWeaponInfo.hpp"
-
-// add your classes here

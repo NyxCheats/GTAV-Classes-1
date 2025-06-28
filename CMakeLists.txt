@@ -18,4 +18,3 @@ message(STATUS "")
 target_include_directories(GTAV-Classes PRIVATE 
     "${SRC_DIR}"
 )
-
